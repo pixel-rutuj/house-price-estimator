@@ -1,0 +1,166 @@
+/* src/App.css */
+
+body {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  color: #fff;
+}
+
+.app-container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background 1s ease-in-out;
+}
+
+.app-container.initial {
+  background: url("C:/Users/Utkarsh/house-price-estimator/src/bg1.jpg") no-repeat center center fixed;
+  background-size: cover;
+  animation: scaleUp 1s forwards;
+}
+
+.app-container.form {
+  background: url("C:/Users/Utkarsh/house-price-estimator/src//bg2.jpg") no-repeat center center fixed;
+  background-size: cover;
+  animation: scaleUp 1s forwards;
+}
+
+@keyframes scaleUp {
+  0% {
+    transform: scale(0.8);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.initial-view {
+  display: flex;
+  justify-content: flex-start; /* Align to the left */
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+  padding-left: 20px; /* Adjust this to move the text left or right */
+}
+
+.custom-jumbotron {
+  background-color: rgba(255, 255, 255, 0.7);
+  padding: 2rem;
+  border-radius: 0.3rem;
+  margin-bottom: 2rem;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+}
+
+.custom-jumbotron:hover {
+  transform: scale(1.05);
+}
+
+.custom-header {
+  font-size: 3rem; /* Increase the font size */
+  font-weight: bold; /* Optional: Make the text bold */
+}
+
+.hover-title {
+  font-size: 3rem; /* Increase the font size */
+  font-weight: bold; /* Make the text bold */
+  cursor: pointer; /* Make the text clickable */
+  transition: transform 0.3s ease-in-out;
+}
+
+.hover-title:hover {
+  transform: scale(1.1);
+}
+
+.animated-card {
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  background-color: rgba(30, 30, 30, 0.85); /* Dark background color for the cards */
+  color: #fff; /* White text color inside the cards */
+  border: none;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.form-card {
+  width: 100%;
+  max-width: 500px; /* Reduce the width */
+  position: absolute;
+  left: 700px; /* Position it to the right side */
+  top: 50%;
+  transform: translateY(-5%);
+}
+
+.form-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+form .form-group {
+  margin-bottom: 1.5rem;
+}
+
+form .form-control {
+  border: 2px solid #000; /* Add a black border */
+}
+
+button {
+  transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+button:hover {
+  background-color: #0056b3;
+  transform: scale(1.02);
+}
+
+.list-group-item {
+  background-color: rgba(30, 30, 30, 0.85); /* Dark background color for the list items */
+  color: #fff; /* White text color inside the list items */
+  border-color: rgba(255, 255, 255, 0.15); /* Border color for the list items */
+}
+
+.fade-in-right {
+  animation: fadeInRight 0.5s forwards;
+}
+
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.fade-out-left {
+  animation: fadeOutLeft 0.5s forwards;
+}
+
+@keyframes fadeOutLeft {
+  from {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+}
+
+.modal-popup {
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
